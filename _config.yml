@@ -27,7 +27,7 @@ description: an iOS developer # this means to ignore newlines until "Language & 
 ## => Language and Timezone
 ##############################
 lang: ko # the language of your site, default as "en"
-timezone: KR # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
+timezone: Asia/Seoul # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
 ## => Author and Social
@@ -119,7 +119,7 @@ sharing:
 comments:
   provider: false # false (default), "disqus", "gitalk", "valine", "custom"
 
-  ## Disqus
+  ## ˝˝˝˝
   disqus:
     shortname: # the Disqus shortname for the site
 
