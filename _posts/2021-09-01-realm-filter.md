@@ -1,6 +1,6 @@
 ---
 title: Comparing filters for Realm Results
-tags: iOS, Swift, Realm, filter
+tags: iOS, swift, realm, filter
 ---
 
 Realm Results에 사용 가능한 Swift filter와 Realm filter를 비교해 봅니다.
@@ -8,11 +8,11 @@ Realm Results에 사용 가능한 Swift filter와 Realm filter를 비교해 봅�
 
 ## Function Definition
 
-[Apple Developer Documentation: Swift filter](https://developer.apple.com/documentation/swift/sequence/3018365-filter){:target="_blank"}
+[Swift filter](https://developer.apple.com/documentation/swift/sequence/3018365-filter){:target="_blank"}
 
     func filter(_ isIncluded: (Self.Element) throws -> Bool) rethrows -> [Self.Element]
 
-[Realm Documentation: Realm filter](https://docs.mongodb.com/realm-legacy/docs/swift/latest/index.html#queries){:target="_blank"}
+[Realm filter](https://docs.mongodb.com/realm-legacy/docs/swift/latest/index.html#queries){:target="_blank"}
 
     func filter(_ predicate: NSPredicate) -> Results<Element>
 
