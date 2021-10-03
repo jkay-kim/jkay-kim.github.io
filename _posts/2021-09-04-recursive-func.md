@@ -28,26 +28,30 @@ stack overflow는 어떻게 해결할 수 있을까요?
 
 먼저 일반적인 재귀 함수를 보겠습니다.
 
-    func factorial<T: Numeric>(n: T) -> T {
-        if n == 0 {
-            return 1
-        } else {
-            return n * factorial(n: n-1)
-        }
+```swift
+func factorial<T: Numeric>(n: T) -> T {
+    if n == 0 {
+        return 1
+    } else {
+        return n * factorial(n: n-1)
     }
+}
+```
 
 여기서 stack이 쌓일 수 밖에 없는 부분은 바로 **return n * factorial(n: n-1)** 때문입니다. 오른쪽 피연산자인 factorial(n: n-1)가 return되기 전까지 n과의 곱하기 연산을 할 수 없기 때문에 이 함수는 stack에서 pop되지 못하고 stack은 쌓여만 갑니다..
 
 이를 꼬리 재귀로 해결해 보겠습니다.
 
-    func factorial<T: Numeric>(n: T) -> T {
-        func factIter(product: T, n: T) -> T {
-            guard n != 1 else { return product }
-            return factIter(product: product*(n-1), n: n-1)
-        }
-        
-        return factIter(product: n, n: n)
+```swift
+func factorial<T: Numeric>(n: T) -> T {
+    func factIter(product: T, n: T) -> T {
+        guard n != 1 else { return product }
+        return factIter(product: product*(n-1), n: n-1)
     }
+
+    return factIter(product: n, n: n)
+}
+```
 
 여기서 **func factIter(product:,n:)**가 꼬리 재귀 함수입니다.
 

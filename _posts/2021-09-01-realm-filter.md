@@ -10,21 +10,27 @@ Realm Results에 사용 가능한 Swift filter와 Realm filter를 비교해 봅�
 
 [Swift filter](https://developer.apple.com/documentation/swift/sequence/3018365-filter){:target="_blank"}
 
-    func filter(_ isIncluded: (Self.Element) throws -> Bool) rethrows -> [Self.Element]
+```swift
+func filter(_ isIncluded: (Self.Element) throws -> Bool) rethrows -> [Self.Element]
+```
 
 [Realm filter](https://docs.mongodb.com/realm-legacy/docs/swift/latest/index.html#queries){:target="_blank"}
 
-    func filter(_ predicate: NSPredicate) -> Results<Element>
+```swift
+func filter(_ predicate: NSPredicate) -> Results<Element>
+```
 
 Swift filter는 isIncluded closure가 true인 값을 필터링하는 반면, Realm filter는 predicate로 전달받은 **쿼리 구문**으로 필터링을 수행합니다.
 
 ## Filtering Realm Results
 
-    // LazyFilterSequence<Results<T>>
-    let swiftFiltered = realm.objects(Model.self).filter { $0.property == true }
+```swift
+// LazyFilterSequence<Results<T>>
+let swiftFiltered = realm.objects(Model.self).filter { $0.property == true }
 
-    // Results<T>
-    let realmFiltered = realm.objects(Model.self).filter("property = true")
+// Results<T>
+let realmFiltered = realm.objects(Model.self).filter("property = true")
+```
 
 - 공통점: realm.object(_:)의 return type인 Results\<T\>는 LazySequence이므로 2개 구문 모두 거의 즉각 반환됩니다.
 - 차이점: LazySequence는 값에 접근할 때 비로소 filtering을 수행하는데, 이때 *성능* 차이가 발생합니다.
