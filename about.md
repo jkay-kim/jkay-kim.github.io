@@ -35,6 +35,7 @@ devjkkim at gmail dot com
 
 ## Experiences
 
-- Bemily (2020.05~)
+- Kakao Corp. (2021.11.01~)
+- Bemily (2020.05~2021.10.15)
 - dongA.com (2019.08~2020.04)
 - wiju (2019.03~2019.07)
