@@ -1,6 +1,6 @@
 ---
 title: Optimizing recursive function
-tags: iOS, swift, optimization, compiler, recursive
+tags: iOS swift optimization compiler recursive
 ---
 
 재귀 함수의 최적화 방법을 알아봅니다.

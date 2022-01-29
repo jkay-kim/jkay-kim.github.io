@@ -1,6 +1,6 @@
 ---
 title: Resolving dyld error
-tags: xcode, dyld, package, library
+tags: xcode dyld package library
 ---
 
 ## Dyld error
