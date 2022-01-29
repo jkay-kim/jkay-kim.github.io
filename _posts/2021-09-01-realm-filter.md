@@ -1,6 +1,6 @@
 ---
 title: Comparing filters for Realm Results
-tags: iOS swift realm filter
+tags: swift realm filter
 ---
 
 Realm Results에 사용 가능한 Swift filter와 Realm filter를 비교해 봅니다.
