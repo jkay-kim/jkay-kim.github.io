@@ -26,7 +26,7 @@ titles:
 key: page-about
 ---
 
-devjkkim at gmail dot com
+devjkay at gmail dot com
 
 ## Interests
 
