@@ -55,6 +55,6 @@ func factorial<T: Numeric>(n: T) -> T {
 
 여기서 **func factIter(product:,n:)**가 꼬리 재귀 함수입니다.
 
-앞에서 살펴본 재귀 함수는 return이 n * fact(n:)이어서 즉각 종료되지 못했지만, 꼬리 재귀에서는 곱셈 값을 꼬리 재귀 함수의 파라미터(product)로 넘기면서 return이 **완전한 하나의 함수로 대체**되었습니다. 따라서 새로운 함수를 호출하는 것과 같으므로, stack에 기존 함수를 유지할 필요없이 새로운 함수로 stack을 대체하면서 재귀 호출이 반복됩니다(컴파일러가 지원할 경우에 한함.).
+앞에서 살펴본 재귀 함수는 return이 n * fact(n:)이어서 즉각 종료되지 못했지만, 꼬리 재귀에서는 곱셈 값을 꼬리 재귀 함수의 파라미터(product)로 넘기면서 return이 **완전한 하나의 함수로 대체**되었습니다. 따라서 새로운 함수를 호출하는 것과 같으므로, stack에 기존 함수를 유지할 필요없이 새로운 함수로 stack을 대체하면서 재귀 호출이 반복됩니다(컴파일러가 지원할 경우에 한함).
 
 Swift compiler는 TCO를 지원하며, 이를 위해서는 Build Setting에서 Optimization Level을 지정해 주어야 합니다. [Code Size Optimization](https://swift.org/blog/osize/){:target="_blank"}
