@@ -8,7 +8,7 @@ Apple Create ML을 공부하던 차에, Classification 관련 용어를 정리�
 ## Definition
 
 ### True vs False
-  - 예측이 진짜(True)인지 가짜(False)인지를 의미
+  - 예측이 참(True)인지 거짓(False)인지를 의미
 
 ### Positive vs Negative
   - 예측 값 자체 `양성(Positive) 또는 음성(Negative)`를 의미
@@ -17,13 +17,13 @@ Apple Create ML을 공부하던 차에, Classification 관련 용어를 정리�
 
 ## 늑대 예측하기
 - True Positive (TP)
-  - 양성이라고 예측했는데, 그 예측이 진짜였다. (늑대라고 예측했는데, 진짜 늑대였다. 👍)
+  - 양성이라고 예측했는데, 그 예측이 참이었다. (늑대라고 예측했는데, 진짜 늑대였다. 👍)
 - False Positive (FP)
-  - 양성이라고 예측했는데, 그 예측이 가짜였다. (늑대라고 예측했는데, 늑대가 아니었다. 👎)
+  - 양성이라고 예측했는데, 그 예측이 거짓이었다. (늑대라고 예측했는데, 늑대가 아니었다. 👎)
 - True Negative (TN)
-  - 음성이라고 예측했는데, 그 예측이 진짜였다. (늑대가 아니라고 예측했는데, 진짜 늑대가 아니었다. 👍)
+  - 음성이라고 예측했는데, 그 예측이 참이었다. (늑대가 아니라고 예측했는데, 진짜 늑대가 아니었다. 👍)
 - False Negative (FN)
-  - 음성이라고 예측했는데, 그 예측이 가짜였다. (늑대가 아니라고 예측했는데, 늑대였다. 👎)
+  - 음성이라고 예측했는데, 그 예측이 거짓이었다. (늑대가 아니라고 예측했는데, 늑대였다. 👎)
 
 ---
 Reference [Google Docs](https://developers.google.com/machine-learning/crash-course/classification/true-false-positive-negative)
